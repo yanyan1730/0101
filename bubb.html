@@ -32,7 +32,6 @@
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             max-width: 400px;
-            position: relative;
         }
 
         h1 {
@@ -46,8 +45,6 @@
 
         .buttons {
             margin-top: 25px;
-            position: relative;
-            height: 120px;
         }
 
         button {
@@ -67,11 +64,14 @@
         .no {
             background-color: #ccc;
             color: #333;
-            position: absolute;
         }
 
         .yes:hover {
             background-color: #d62828;
+        }
+
+        .no:hover {
+            background-color: #999;
         }
     </style>
 </head>
@@ -80,39 +80,25 @@
     <div class="overlay">
         <div class="card">
             <h1>Hi, Bubbbaaa 💖</h1>
-            <p>Detdet ta hehehehe</p>
+            <p>
+                Detdet ta hehehehe
+            </p>
             <p><strong>Will you be my Valentine bubbababes? 🌹</strong></p>
 
             <div class="buttons">
                 <button class="yes" onclick="yesClicked()">Yesss!! 💕</button>
-                <button class="no" id="noBtn">Nope 🙅‍♂️</button>
+                <button class="yess" onclick="yessClicked()">Yesss 🙈</button>
             </div>
         </div>
     </div>
 
     <script>
-        const noBtn = document.getElementById("noBtn");
-
-        function moveButton() {
-            const container = document.querySelector(".buttons");
-            const maxX = container.offsetWidth - noBtn.offsetWidth;
-            const maxY = container.offsetHeight - noBtn.offsetHeight;
-
-            const randomX = Math.random() * maxX;
-            const randomY = Math.random() * maxY;
-
-            noBtn.style.left = randomX + "px";
-            noBtn.style.top = randomY + "px";
+        function yesClicked() {
+            alert("💖 Iloveeyousooomuch Bubb🥰");
         }
 
-        // For desktop
-        noBtn.addEventListener("mouseover", moveButton);
-
-        // For mobile (iOS / Android)
-        noBtn.addEventListener("touchstart", moveButton);
-
-        function yesClicked() {
-            alert("💖 Iloveeyousooomuch Bubb 🥰");
+        function yessClicked() {
+            alert("way takas yes gihapon hahaha");
         }
     </script>
 </body>
